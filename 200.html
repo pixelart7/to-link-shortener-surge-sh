@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      var short = window.location.pathname.split('/').pop()
+      fetch(`https://kvdb.io/3B3pc1hjdDVThuWxJsVmbx/${short}`)
+        .then(function (response) {
+          return response.text()
+        })
+        .then(function (body) {
+          window.location.replace(decodeURI(body));
+        })
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
